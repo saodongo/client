@@ -1,25 +1,25 @@
-import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-dom';
-import Navbar from './components/NavBar';
-import Home from './components/Home';
-import Profiles from './components/Profiles';
-import Phones from './components/About';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import PhoneList from './Components/PhoneList';
+import FeatureList from './Components/FeatureList'; // If you want to add FeatureList
+import ProfileList from './Components/ProfileList'; // If you want to add ProfileList
 
-
-function App() {
+const App = () => {
   return (
     <Router>
-      <div className="pt-[13vh]">
+      <div className="min-h-screen bg-gray-100">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/profiles" element={<Profiles />} />
-          <Route path="/phones" element={<Phones />} />
-          <Route path="/phones/:id" element={<Phones />} />
-         
+          <Route path="/phones" element={<PhoneList />} />
+          <Route path="/features" element={<FeatureList />} /> {/* If you want to show FeatureList */}
+          <Route path="/ProfilesList" element={<ProfileList />} /> {/* If you want to show ProfileList */}
         </Routes>
       </div>
     </Router>
   );
-}
+};
 
 export default App;

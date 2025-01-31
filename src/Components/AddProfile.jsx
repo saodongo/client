@@ -25,7 +25,7 @@ const AddProfile = () => {
       if (!response.ok) throw new Error("Failed to save profile");
 
       alert("Profile added successfully!");
-      navigate("/profiles"); // Redirect to profiles page
+      navigate("/profiles"); 
     } catch (error) {
       console.error("Error saving profile:", error);
       alert("Failed to save profile. Please try again.");

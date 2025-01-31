@@ -2,15 +2,14 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 const Profile = () => {
-  const { id } = useParams(); // Get the profile ID from the URL
+  const { id } = useParams(); 
 
-  // Example profile data (replace with API call in a real app)
+  
   const profiles = [
     { id: 1, name: 'John Doe', email: 'john.doe@example.com', phone: '123-456-7890' },
     { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com', phone: '987-654-3210' },
   ];
 
-  // Find the profile by ID
   const profile = profiles.find((p) => p.id === parseInt(id));
 
   if (!profile) {
